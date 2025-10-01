@@ -774,7 +774,7 @@ storage_repairs,TEK30,cooling,8.16
 </section>
 <section id="specify-heating-system-shares">
 <h3>Specify heating system shares<a class="headerlink" href="#specify-heating-system-shares" title="Link to this heading"></a></h3>
-<p>Finally <span class="xref std std-ref">heating_system_initial_shares.csv</span> must have heating system share defined for TEK30.</p>
+<p>Finally <span class="xref std std-ref">heating_system_initial_shares.csv</span> must have the column heating_system_share defined for TEK30.</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-2-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-2-2-0" name="2-0" role="tab" tabindex="0">Summary table</button><button aria-controls="panel-2-2-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-2-2-1" name="2-1" role="tab" tabindex="-1">formatted table</button><button aria-controls="panel-2-2-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-2-2-2" name="2-2" role="tab" tabindex="-1">raw csv</button></div><div aria-labelledby="tab-2-2-0" class="sphinx-tabs-panel" id="panel-2-2-0" name="2-0" role="tabpanel" tabindex="0"><table class="docutils align-default" id="id4">
 <caption><span class="caption-text">Summary heating_system_initial_shares.csv</span><a class="headerlink" href="#id4" title="Link to this table"></a></caption>
@@ -1880,6 +1880,18 @@ sports,TEK30,Gas,2023,0.0016565044759408
 </div>
 </div></div>
 <p>Similarly to TEK17, there is no need to add TEK30 to <a class="reference internal" href="../area/index.html#area"><span class="std std-ref">area.csv</span></a> as all the area in both TEKs will be built after the start year 2020.</p>
+<p>Once you have adapted building_code_parameters.csv, energy_need_original_condition.csv and heating_system_initial_shares.csv to TEK30, you cat re-run the model.</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">ebm</span> <span class="p">-</span><span class="n">-input</span><span class="p">=</span><span class="n">user-case-tek30</span>
+</pre></div>
+</div>
+<p>The model results can be found in the subdirectory named <code class="docutils literal notranslate"><span class="pre">output</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can have ebm open the results as they are written by using the <code class="docutils literal notranslate"><span class="pre">--open</span></code> option</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">ebm</span> <span class="p">-</span><span class="n">-input</span><span class="p">=</span><span class="n">user-case-tek30</span> <span class="p">-</span><span class="n">-open</span>
+</pre></div>
+</div>
+</div>
 </section>
 <section id="extra-credit">
 <h3>Extra credit<a class="headerlink" href="#extra-credit" title="Link to this heading"></a></h3>
@@ -1887,7 +1899,7 @@ sports,TEK30,Gas,2023,0.0016565044759408
 have defined default values under the column building_code that will apply to TEK30. For extra credit you may override the defaults with your own values.</p>
 <section id="energy-need-improvements">
 <h4>energy need improvements<a class="headerlink" href="#energy-need-improvements" title="Link to this heading"></a></h4>
-<p>Optionally, you can add a line to <span class="xref std std-ref">energy_need_improvements.csv</span> if you think that there is no yearly reduction lighting with TEK30 .</p>
+<p>You can add a line to <span class="xref std std-ref">energy_need_improvements.csv</span> if you think that there is no yearly reduction lighting with TEK30 .</p>
 <div class="highlight-csv notranslate"><div class="highlight"><pre><span></span>default,TEK30,lighting,yearly_reduction,2031,0.0,2050
 </pre></div>
 </div>
@@ -1906,9 +1918,11 @@ have defined default values under the column building_code that will apply to TE
 </section>
 <section id="energy-need-original-condition">
 <h4>energy_need_original_condition<a class="headerlink" href="#energy-need-original-condition" title="Link to this heading"></a></h4>
-<p>While the default values for lighting in <cite>energy_need_original_condition.csv&lt;energy_need_original_condition&gt;</cite> are handy for editing, you might want to set explicit values for TEK30.</p>
-<div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-3-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-3-3-0" name="3-0" role="tab" tabindex="0">default values</button><button aria-controls="panel-3-3-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-3-3-1" name="3-1" role="tab" tabindex="-1">explicit TEK30</button><button aria-controls="panel-3-3-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-3-3-2" name="3-2" role="tab" tabindex="-1">grouping with TEK17</button></div><div aria-labelledby="tab-3-3-0" class="sphinx-tabs-panel" id="panel-3-3-0" name="3-0" role="tabpanel" tabindex="0"><table class="docutils align-default" id="id6">
+<p><strong>default values</strong></p>
+<p>By default all building codes have the same energy use per square metre.</p>
+<div class="admonition-default-values admonition">
+<p class="admonition-title">default values</p>
+<table class="docutils align-default" id="id6">
 <caption><span class="caption-text">default values in energy_need_original_condition.csv</span><a class="headerlink" href="#id6" title="Link to this table"></a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>building_category</p></th>
@@ -1985,7 +1999,13 @@ have defined default values under the column building_code that will apply to TE
 </tr>
 </tbody>
 </table>
-</div><div aria-labelledby="tab-3-3-1" class="sphinx-tabs-panel" hidden="true" id="panel-3-3-1" name="3-1" role="tabpanel" tabindex="0"><table class="docutils align-default" id="id7">
+</div>
+<p><strong>Defining explicit lighting for TEK30</strong></p>
+<p>While the default values for lighting in <cite>energy_need_original_condition.csv&lt;energy_need_original_condition&gt;</cite> are handy for editing, you might want to set explicit values for TEK30.</p>
+<blockquote>
+<div><div class="admonition-explicit-tek30 admonition">
+<p class="admonition-title">explicit TEK30</p>
+<table class="docutils align-default" id="id7">
 <caption><span class="caption-text">Excerpt TEK30 lighting energy_need_original_condition.csv</span><a class="headerlink" href="#id7" title="Link to this table"></a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>building_category</p></th>
@@ -2062,7 +2082,13 @@ have defined default values under the column building_code that will apply to TE
 </tr>
 </tbody>
 </table>
-</div><div aria-labelledby="tab-3-3-2" class="sphinx-tabs-panel" hidden="true" id="panel-3-3-2" name="3-2" role="tabpanel" tabindex="0"><p>Plus (+) can be used to combine the definition for multiple building categories and building codes</p>
+</div>
+</div></blockquote>
+<p><strong>Defining common lighting for TEK17 and TEK30</strong></p>
+<p>Plus (+) can be used to combine the definition for multiple building codes. In this case TEK17 and
+TEK30 have the same values for energy use per square metre.</p>
+<div class="admonition-grouping-with-tek17 admonition">
+<p class="admonition-title">grouping with TEK17</p>
 <table class="docutils align-default" id="id8">
 <caption><span class="caption-text">Excerpt TEK30+TEK17 lighting energy_need_original_condition.csv</span><a class="headerlink" href="#id8" title="Link to this table"></a></caption>
 <thead>
@@ -2125,7 +2151,7 @@ have defined default values under the column building_code that will apply to TE
 </tr>
 </tbody>
 </table>
-</div></div>
+</div>
 <p>Last Updated on 2025-10-01</p>
 <p>Version: 1.2.9.</p>
 </section>
