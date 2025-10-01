@@ -52,6 +52,7 @@
 <li class="toctree-l2"><a class="reference internal" href="getting_started.html">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user_case.html">User case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calibrating_the_model.html">Calibrating the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calibrating_the_model.html#assumptions">Assumptions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configuration.html">Model configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Geographical_distribution</a><ul>
@@ -114,9 +115,7 @@
              
   <section id="geographical-distribution">
 <h1>Geographical_distribution<a class="headerlink" href="#geographical-distribution" title="Link to this heading"></a></h1>
-<p>The geographical distribution module <code class="docutils literal notranslate"><span class="pre">ebmgeodist</span></code> is an extension of the EBM model that enables the distribution of annual energy use
-projection results from EBM to finer geographical units, such as municipalities, counties, or grid areas.To use the module, you can
-follow the instructions below.</p>
+<p>To use the geographical distribution module <code class="docutils literal notranslate"><span class="pre">ebmgeodist</span></code>, you can follow the instructions below.</p>
 <section id="quick-start-guide">
 <h2>Quick Start Guide<a class="headerlink" href="#quick-start-guide" title="Link to this heading"></a></h2>
 <p>Please, open your preferred terminal and follow the instructions below.</p>
@@ -132,9 +131,7 @@ follow the instructions below.</p>
 </pre></div>
 </div>
 <p>By default, the distribution keys are loaded from <cite>input</cite>, and the results are written to the directory <cite>output</cite>.
-Running the module without any options will distribute electricity consumption use for all building categories at the municipality level. if
-the user wants to distribute other energy types, this can be specified using the switch <code class="docutils literal notranslate"><span class="pre">--energy-type</span></code>. For example, to distribute
-district heating consumption, run: <code class="docutils literal notranslate"><span class="pre">--energy-type</span> <span class="pre">fjernvarme</span></code>.
+Running the module without any options will distribute electricity consumption use for all building categories at the municipality level.
 By default, the distribution keys are loaded from the input file <code class="docutils literal notranslate"><span class="pre">yearly_aggregated_elhub_data.parquet</span></code> under the <code class="docutils literal notranslate"><span class="pre">input</span></code> folder.
 If the file does not exist, the module will generate the distribution keys using Elhub API inside the module, assuming that the user
 has access to Elhub data via Azure Blob Storage.</p>

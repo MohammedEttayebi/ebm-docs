@@ -52,7 +52,7 @@ Defines the rate of change in heating systems towards 2050. The change is made o
 **heating_system_initial_shares.csv** |br|
 Distribution of heating systems per building category and building code in the start year.
 
-**heating_system_efficiencies.csv** |br|
+**heating_systems_efficiencies** |br|
 Parameters of the various heating technologies. Includes load shares, efficiencies and the related energy product.
 
 
@@ -317,64 +317,84 @@ The input constraints, datatypes and accepted values are listed per input file i
             - float using a decimal point ('.') as the separator
             - **0.0** ≤ value
 
-         .. tab:: heating_system_efficiencies
+         .. tab:: heating_systems_efficiencies
             ``heating_systems``
             - required
             - string
 
-            ``base_load_energy_product``
+            ``Grunnlast``
             - required
             - string
 
-            ``peak_load_energy_product``
+            ``Spisslast``
             - required
             - string
 
-            ``tertiary_load_energy_product``
+            ``Ekstralast``
             - required
             - string
 
-            ``tertiary_load_coverage``
+            ``Grunnlast energivare``
+            - required
+            - string
+
+            ``Spisslast energivare``
+            - required
+            - string
+
+            ``Ekstralast energivare``
+            - required
+            - string
+
+            ``Ekstralast andel``
             - required
             - float
             - float using a decimal point ('.') as the separator
             - **0.0** ≤ value ≤ **1.0**
 
-            ``"base_load_coverage``
+            ``Grunnlast andel``
             - required
             - float
             - **0.0** ≤ value ≤ **1.0**
 
-            ``peak_load_coverage``
+            ``Spisslast andel``
             - required
             - float
             - **0.0** ≤ value ≤ **1.0**
 
-            ``base_load_efficiency``
+            ``Grunnlast virkningsgrad``
             - required
             - float
             - value > **0.0**
 
-            ``peak_load_efficiency``
+            ``Spisslast virkningsgrad``
             - required
             - float
             - value > **0.0**
 
-            ``tertiary_load_efficiency``
+            ``Ekstralast virkningsgrad``
             - required
             - float
             - value > **0.0**
 
-            ``domestic_hot_water_energy_product``
+            ``Tappevann``
             - required
             - string
 
-            ``domestic_hot_water_efficiency``
+            ``Tappevann energivare``
+            - required
+            - string
+
+            ``Tappevann virkningsgrad``
             - required
             - float
             - value > **0.0**
 
-            ``cooling_efficiency``
+            ``Spesifikt elforbruk``
+            - required
+            - float
+
+            ``Kjoling virkningsgrad``
             - required
             - float
             - value > **0.0**

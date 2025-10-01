@@ -99,8 +99,202 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ebm-model-dataframemodels-module">
-<h1>ebm.model.dataframemodels module<a class="headerlink" href="#ebm-model-dataframemodels-module" title="Link to this heading"></a></h1>
+  <section id="module-ebm.model.dataframemodels">
+<span id="ebm-model-dataframemodels-module"></span><h1>ebm.model.dataframemodels module<a class="headerlink" href="#module-ebm.model.dataframemodels" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.EnergyNeedYearlyImprovements">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EnergyNeedYearlyImprovements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/model/dataframemodels.html#EnergyNeedYearlyImprovements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.dataframemodels.EnergyNeedYearlyImprovements" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrameModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.EnergyNeedYearlyImprovements.building_category">
+<span class="sig-name descname"><span class="pre">building_category</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'building_category'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.EnergyNeedYearlyImprovements.building_category" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.EnergyNeedYearlyImprovements.building_code">
+<span class="sig-name descname"><span class="pre">building_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'building_code'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.EnergyNeedYearlyImprovements.building_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.EnergyNeedYearlyImprovements.purpose">
+<span class="sig-name descname"><span class="pre">purpose</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'purpose'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.EnergyNeedYearlyImprovements.purpose" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.EnergyNeedYearlyImprovements.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'value'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.EnergyNeedYearlyImprovements.value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.EnergyNeedYearlyImprovements.start_year">
+<span class="sig-name descname"><span class="pre">start_year</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'start_year'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.EnergyNeedYearlyImprovements.start_year" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.EnergyNeedYearlyImprovements.function">
+<span class="sig-name descname"><span class="pre">function</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'function'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.EnergyNeedYearlyImprovements.function" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.EnergyNeedYearlyImprovements.end_year">
+<span class="sig-name descname"><span class="pre">end_year</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'end_year'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.EnergyNeedYearlyImprovements.end_year" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.EnergyNeedYearlyImprovements.Config">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="reference internal" href="../_modules/ebm/model/dataframemodels.html#EnergyNeedYearlyImprovements.Config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.dataframemodels.EnergyNeedYearlyImprovements.Config" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.EnergyNeedYearlyImprovements.Config.unique">
+<span class="sig-name descname"><span class="pre">unique</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['building_category',</span> <span class="pre">'building_code',</span> <span class="pre">'purpose',</span> <span class="pre">'start_year',</span> <span class="pre">'function',</span> <span class="pre">'end_year']</span></em><a class="headerlink" href="#ebm.model.dataframemodels.EnergyNeedYearlyImprovements.Config.unique" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.EnergyNeedYearlyImprovements.Config.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'EnergyNeedYearlyImprovements'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.EnergyNeedYearlyImprovements.Config.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.YearlyReduction">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">YearlyReduction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/model/dataframemodels.html#YearlyReduction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.dataframemodels.YearlyReduction" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrameModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.YearlyReduction.building_category">
+<span class="sig-name descname"><span class="pre">building_category</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'building_category'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.YearlyReduction.building_category" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.YearlyReduction.building_code">
+<span class="sig-name descname"><span class="pre">building_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'building_code'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.YearlyReduction.building_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.YearlyReduction.purpose">
+<span class="sig-name descname"><span class="pre">purpose</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'purpose'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.YearlyReduction.purpose" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.YearlyReduction.start_year">
+<span class="sig-name descname"><span class="pre">start_year</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'start_year'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.YearlyReduction.start_year" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.YearlyReduction.end_year">
+<span class="sig-name descname"><span class="pre">end_year</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'end_year'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.YearlyReduction.end_year" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.YearlyReduction.yearly_efficiency_improvement">
+<span class="sig-name descname"><span class="pre">yearly_efficiency_improvement</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'yearly_efficiency_improvement'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.YearlyReduction.yearly_efficiency_improvement" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.YearlyReduction.Config">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="reference internal" href="../_modules/ebm/model/dataframemodels.html#YearlyReduction.Config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.dataframemodels.YearlyReduction.Config" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.YearlyReduction.Config.unique">
+<span class="sig-name descname"><span class="pre">unique</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['building_category',</span> <span class="pre">'building_code',</span> <span class="pre">'purpose',</span> <span class="pre">'start_year',</span> <span class="pre">'function',</span> <span class="pre">'end_year']</span></em><a class="headerlink" href="#ebm.model.dataframemodels.YearlyReduction.Config.unique" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.YearlyReduction.Config.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'YearlyReduction'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.YearlyReduction.Config.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.YearlyReduction.from_energy_need_yearly_improvements">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_energy_need_yearly_improvements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">en_yearly_improvement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrameBase</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#ebm.model.dataframemodels.EnergyNeedYearlyImprovements" title="ebm.model.dataframemodels.EnergyNeedYearlyImprovements"><span class="pre">EnergyNeedYearlyImprovements</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#ebm.model.dataframemodels.EnergyNeedYearlyImprovements" title="ebm.model.dataframemodels.EnergyNeedYearlyImprovements"><span class="pre">EnergyNeedYearlyImprovements</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrameBase</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#ebm.model.dataframemodels.YearlyReduction" title="ebm.model.dataframemodels.YearlyReduction"><span class="pre">YearlyReduction</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/ebm/model/dataframemodels.html#YearlyReduction.from_energy_need_yearly_improvements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.dataframemodels.YearlyReduction.from_energy_need_yearly_improvements" title="Link to this definition"></a></dt>
+<dd><p>Transforms a EnergyNeedYearlyImprovement DataFrame into a EnergyNeedYearlyReduction DataFrame.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
+<p>en_yearly_improvement : DataFrame[EnergyNeedYearlyImprovements]</p>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h2>
+<p>DataFrameBase[YearlyReduction]</p>
+</section>
+<section id="raises">
+<h2>Raises<a class="headerlink" href="#raises" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>pa.errors.SchemaError</dt><dd><p>When the resulting dataframe fails to validate</p>
+</dd>
+<dt>pa.errors.SchemaErrors</dt><dd><p>When the resulting dataframe fails to validate</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.PolicyImprovement">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PolicyImprovement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/model/dataframemodels.html#PolicyImprovement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.dataframemodels.PolicyImprovement" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrameModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.PolicyImprovement.building_category">
+<span class="sig-name descname"><span class="pre">building_category</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'building_category'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.PolicyImprovement.building_category" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.PolicyImprovement.building_code">
+<span class="sig-name descname"><span class="pre">building_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'building_code'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.PolicyImprovement.building_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.PolicyImprovement.purpose">
+<span class="sig-name descname"><span class="pre">purpose</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'purpose'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.PolicyImprovement.purpose" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.PolicyImprovement.start_year">
+<span class="sig-name descname"><span class="pre">start_year</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'start_year'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.PolicyImprovement.start_year" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.PolicyImprovement.end_year">
+<span class="sig-name descname"><span class="pre">end_year</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'end_year'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.PolicyImprovement.end_year" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.PolicyImprovement.improvement_at_end_year">
+<span class="sig-name descname"><span class="pre">improvement_at_end_year</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'improvement_at_end_year'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.PolicyImprovement.improvement_at_end_year" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.PolicyImprovement.Config">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="reference internal" href="../_modules/ebm/model/dataframemodels.html#PolicyImprovement.Config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.dataframemodels.PolicyImprovement.Config" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.PolicyImprovement.Config.unique">
+<span class="sig-name descname"><span class="pre">unique</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['building_category',</span> <span class="pre">'building_code',</span> <span class="pre">'purpose',</span> <span class="pre">'start_year',</span> <span class="pre">'end_year']</span></em><a class="headerlink" href="#ebm.model.dataframemodels.PolicyImprovement.Config.unique" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.PolicyImprovement.Config.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PolicyImprovement'</span></em><a class="headerlink" href="#ebm.model.dataframemodels.PolicyImprovement.Config.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.PolicyImprovement.start_year_before_end_year">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">start_year_before_end_year</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/ebm/model/dataframemodels.html#PolicyImprovement.start_year_before_end_year"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.dataframemodels.PolicyImprovement.start_year_before_end_year" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.model.dataframemodels.PolicyImprovement.from_energy_need_yearly_improvements">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_energy_need_yearly_improvements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">energy_need_improvements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrameBase</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#ebm.model.dataframemodels.EnergyNeedYearlyImprovements" title="ebm.model.dataframemodels.EnergyNeedYearlyImprovements"><span class="pre">EnergyNeedYearlyImprovements</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#ebm.model.dataframemodels.EnergyNeedYearlyImprovements" title="ebm.model.dataframemodels.EnergyNeedYearlyImprovements"><span class="pre">EnergyNeedYearlyImprovements</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrameBase</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#ebm.model.dataframemodels.PolicyImprovement" title="ebm.model.dataframemodels.PolicyImprovement"><span class="pre">PolicyImprovement</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/ebm/model/dataframemodels.html#PolicyImprovement.from_energy_need_yearly_improvements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.dataframemodels.PolicyImprovement.from_energy_need_yearly_improvements" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 
 

@@ -98,8 +98,84 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ebm-energy-consumption-module">
-<h1>ebm.energy_consumption module<a class="headerlink" href="#ebm-energy-consumption-module" title="Link to this heading"></a></h1>
+  <section id="module-ebm.energy_consumption">
+<span id="ebm-energy-consumption-module"></span><h1>ebm.energy_consumption module<a class="headerlink" href="#module-ebm.energy_consumption" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ebm.energy_consumption.EnergyConsumption">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EnergyConsumption</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">heating_systems_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/energy_consumption.html#EnergyConsumption"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.energy_consumption.EnergyConsumption" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.energy_consumption.EnergyConsumption.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">heating_systems_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/energy_consumption.html#EnergyConsumption.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.energy_consumption.EnergyConsumption.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.energy_consumption.EnergyConsumption.grouped_heating_systems">
+<span class="sig-name descname"><span class="pre">grouped_heating_systems</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/energy_consumption.html#EnergyConsumption.grouped_heating_systems"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.energy_consumption.EnergyConsumption.grouped_heating_systems" title="Link to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Groups and sums heating_system_parameters over building_category, TEK, Oppvarmingstyper. All excess values will</dt><dd><p>be summed.</p>
+</dd>
+</dl>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>pd.DataFrame</dt><dd><p>heating_systems_parameters grouped and summed</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.energy_consumption.EnergyConsumption.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">energy_requirements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/energy_consumption.html#EnergyConsumption.calculate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.energy_consumption.EnergyConsumption.calculate" title="Link to this definition"></a></dt>
+<dd><p>calculate energy usage by from energy_requirements and heating_systems_parameters</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
+<p>energy_requirements : pd.DataFrame</p>
+</section>
+<section id="id1">
+<h2>Returns<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>pd.DataFrame</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.energy_consumption.EnergyConsumption.adjust_heat_pump">
+<span class="sig-name descname"><span class="pre">adjust_heat_pump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/energy_consumption.html#EnergyConsumption.adjust_heat_pump"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.energy_consumption.EnergyConsumption.adjust_heat_pump" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.energy_consumption.EnergyConsumption.adjust_other">
+<span class="sig-name descname"><span class="pre">adjust_other</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/energy_consumption.html#EnergyConsumption.adjust_other"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.energy_consumption.EnergyConsumption.adjust_other" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.energy_consumption.EnergyConsumption.adjust_cooling">
+<span class="sig-name descname"><span class="pre">adjust_cooling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/energy_consumption.html#EnergyConsumption.adjust_cooling"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.energy_consumption.EnergyConsumption.adjust_cooling" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.energy_consumption.EnergyConsumption.adjust_heating_dhw">
+<span class="sig-name descname"><span class="pre">adjust_heating_dhw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/energy_consumption.html#EnergyConsumption.adjust_heating_dhw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.energy_consumption.EnergyConsumption.adjust_heating_dhw" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.energy_consumption.EnergyConsumption.adjust_heating_rv">
+<span class="sig-name descname"><span class="pre">adjust_heating_rv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/energy_consumption.html#EnergyConsumption.adjust_heating_rv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.energy_consumption.EnergyConsumption.adjust_heating_rv" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.energy_consumption.calibrate_heating_systems">
+<span class="sig-name descname"><span class="pre">calibrate_heating_systems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiply</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/energy_consumption.html#calibrate_heating_systems"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.energy_consumption.calibrate_heating_systems" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.energy_consumption.calibrate_heating_systems_adder">
+<span class="sig-name descname"><span class="pre">calibrate_heating_systems_adder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/energy_consumption.html#calibrate_heating_systems_adder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.energy_consumption.calibrate_heating_systems_adder" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
 
 

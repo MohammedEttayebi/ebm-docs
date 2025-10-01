@@ -99,8 +99,59 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ebm-model-calibrate-heating-systems-module">
-<h1>ebm.model.calibrate_heating_systems module<a class="headerlink" href="#ebm-model-calibrate-heating-systems-module" title="Link to this heading"></a></h1>
+  <section id="module-ebm.model.calibrate_heating_systems">
+<span id="ebm-model-calibrate-heating-systems-module"></span><h1>ebm.model.calibrate_heating_systems module<a class="headerlink" href="#module-ebm.model.calibrate_heating_systems" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.model.calibrate_heating_systems.extract_area_forecast">
+<span class="sig-name descname"><span class="pre">extract_area_forecast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database_manager</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/model/calibrate_heating_systems.html#extract_area_forecast"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.calibrate_heating_systems.extract_area_forecast" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.model.calibrate_heating_systems.extract_energy_requirements">
+<span class="sig-name descname"><span class="pre">extract_energy_requirements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">area_forecast</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database_manager</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/model/calibrate_heating_systems.html#extract_energy_requirements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.calibrate_heating_systems.extract_energy_requirements" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.model.calibrate_heating_systems.extract_heating_systems">
+<span class="sig-name descname"><span class="pre">extract_heating_systems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">energy_requirements</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database_manager</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/model/calibrate_heating_systems.html#extract_heating_systems"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.calibrate_heating_systems.extract_heating_systems" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.model.calibrate_heating_systems.transform_by_energy_source">
+<span class="sig-name descname"><span class="pre">transform_by_energy_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy_class_column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy_source_column</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/model/calibrate_heating_systems.html#transform_by_energy_source"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.calibrate_heating_systems.transform_by_energy_source" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.model.calibrate_heating_systems.group_heating_systems_by_energy_carrier">
+<span class="sig-name descname"><span class="pre">group_heating_systems_by_energy_carrier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/model/calibrate_heating_systems.html#group_heating_systems_by_energy_carrier"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.calibrate_heating_systems.group_heating_systems_by_energy_carrier" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.model.calibrate_heating_systems.transform_pumps">
+<span class="sig-name descname"><span class="pre">transform_pumps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_year</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/model/calibrate_heating_systems.html#transform_pumps"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.calibrate_heating_systems.transform_pumps" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.model.calibrate_heating_systems.sort_heating_systems_by_energy_source">
+<span class="sig-name descname"><span class="pre">sort_heating_systems_by_energy_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transformed</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/model/calibrate_heating_systems.html#sort_heating_systems_by_energy_source"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.calibrate_heating_systems.sort_heating_systems_by_energy_source" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ebm.model.calibrate_heating_systems.DistributionOfHeatingSystems">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DistributionOfHeatingSystems</span></span><a class="reference internal" href="../_modules/ebm/model/calibrate_heating_systems.html#DistributionOfHeatingSystems"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.calibrate_heating_systems.DistributionOfHeatingSystems" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.model.calibrate_heating_systems.DistributionOfHeatingSystems.extract">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database_manager</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/model/calibrate_heating_systems.html#DistributionOfHeatingSystems.extract"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.calibrate_heating_systems.DistributionOfHeatingSystems.extract" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.model.calibrate_heating_systems.DistributionOfHeatingSystems.transform">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/model/calibrate_heating_systems.html#DistributionOfHeatingSystems.transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.calibrate_heating_systems.DistributionOfHeatingSystems.transform" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 
 

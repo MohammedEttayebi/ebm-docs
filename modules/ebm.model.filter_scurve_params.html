@@ -99,8 +99,79 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ebm-model-filter-scurve-params-module">
-<h1>ebm.model.filter_scurve_params module<a class="headerlink" href="#ebm-model-filter-scurve-params-module" title="Link to this heading"></a></h1>
+  <section id="module-ebm.model.filter_scurve_params">
+<span id="ebm-model-filter-scurve-params-module"></span><h1>ebm.model.filter_scurve_params module<a class="headerlink" href="#module-ebm.model.filter_scurve_params" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ebm.model.filter_scurve_params.FilterScurveParams">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FilterScurveParams</span></span><a class="reference internal" href="../_modules/ebm/model/filter_scurve_params.html#FilterScurveParams"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.filter_scurve_params.FilterScurveParams" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A utility class for filtering S-curve parameters based on building category and condition.</p>
+<p>This class provides a static method to filter a DataFrame containing S-curve parameters,
+extracting the relevant data for a specific building category and set of conditions.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.filter_scurve_params.FilterScurveParams.COL_BUILDING_CATEGORY">
+<span class="sig-name descname"><span class="pre">COL_BUILDING_CATEGORY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'building_category'</span></em><a class="headerlink" href="#ebm.model.filter_scurve_params.FilterScurveParams.COL_BUILDING_CATEGORY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.filter_scurve_params.FilterScurveParams.COL_BUILDING_CONDITION">
+<span class="sig-name descname"><span class="pre">COL_BUILDING_CONDITION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'condition'</span></em><a class="headerlink" href="#ebm.model.filter_scurve_params.FilterScurveParams.COL_BUILDING_CONDITION" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.filter_scurve_params.FilterScurveParams.COL_EARLIEST_AGE">
+<span class="sig-name descname"><span class="pre">COL_EARLIEST_AGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'earliest_age_for_measure'</span></em><a class="headerlink" href="#ebm.model.filter_scurve_params.FilterScurveParams.COL_EARLIEST_AGE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.filter_scurve_params.FilterScurveParams.COL_AVERAGE_AGE">
+<span class="sig-name descname"><span class="pre">COL_AVERAGE_AGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'average_age_for_measure'</span></em><a class="headerlink" href="#ebm.model.filter_scurve_params.FilterScurveParams.COL_AVERAGE_AGE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.filter_scurve_params.FilterScurveParams.COL_LAST_AGE">
+<span class="sig-name descname"><span class="pre">COL_LAST_AGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'last_age_for_measure'</span></em><a class="headerlink" href="#ebm.model.filter_scurve_params.FilterScurveParams.COL_LAST_AGE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.filter_scurve_params.FilterScurveParams.COL_RUSH_YEARS">
+<span class="sig-name descname"><span class="pre">COL_RUSH_YEARS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'rush_period_years'</span></em><a class="headerlink" href="#ebm.model.filter_scurve_params.FilterScurveParams.COL_RUSH_YEARS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.filter_scurve_params.FilterScurveParams.COL_RUSH_SHARE">
+<span class="sig-name descname"><span class="pre">COL_RUSH_SHARE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'rush_share'</span></em><a class="headerlink" href="#ebm.model.filter_scurve_params.FilterScurveParams.COL_RUSH_SHARE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ebm.model.filter_scurve_params.FilterScurveParams.COL_NEVER_SHARE">
+<span class="sig-name descname"><span class="pre">COL_NEVER_SHARE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'never_share'</span></em><a class="headerlink" href="#ebm.model.filter_scurve_params.FilterScurveParams.COL_NEVER_SHARE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.model.filter_scurve_params.FilterScurveParams.filter">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">building_category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ebm.model.building_category.html#ebm.model.building_category.BuildingCategory" title="ebm.model.building_category.BuildingCategory"><span class="pre">BuildingCategory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">scurve_condition_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scurve_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="ebm.model.data_classes.html#ebm.model.data_classes.ScurveParameters" title="ebm.model.data_classes.ScurveParameters"><span class="pre">ScurveParameters</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/ebm/model/filter_scurve_params.html#FilterScurveParams.filter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.filter_scurve_params.FilterScurveParams.filter" title="Link to this definition"></a></dt>
+<dd><p>Filters S-curve parameters by building category and condition.</p>
+<p>This method filters a DataFrame containing S-curve parameters to extract data specific to
+the provided building category and conditions listed in <cite>scurve_condition_list</cite>. The filtered
+data is then converted into a dictionary of <cite>ScurveParameters</cite> dataclass instances, each
+representing the S-curve parameters for a particular condition.</p>
+<p>Parameters:
+- building_category (BuildingCategory): The building category for which the S-curve parameters are being filtered.
+- scurve_condition_list (List[str]): A list of conditions (as strings) for which the S-curve parameters are needed.
+- scurve_params (pd.DataFrame): DataFrame containing the S-curve parameters, with columns for building category, condition, and various age-related metrics.</p>
+<p>Returns:
+- filtered_scurve_params (Dict[str, ScurveParameters]): A dictionary where the keys are conditions (str) and the values</p>
+<blockquote>
+<div><p>are <cite>ScurveParameters</cite> dataclass instances containing the
+corresponding S-curve parameters for each condition.</p>
+</div></blockquote>
+<p>Raises:
+- KeyError: If the provided building category is not found in the S-curve parameters DataFrame.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 

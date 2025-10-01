@@ -139,7 +139,7 @@ Historical energy use of fuel wood, electricity and fossil fuel in holiday homes
 Defines the rate of change in heating systems towards 2050. The change is made on a percentage basis compared with the start year.</p>
 <p><strong>heating_system_initial_shares.csv</strong> <br>
 Distribution of heating systems per building category and building code in the start year.</p>
-<p><strong>heating_system_efficiencies.csv</strong> <br>
+<p><strong>heating_systems_efficiencies</strong> <br>
 Parameters of the various heating technologies. Includes load shares, efficiencies and the related energy product.</p>
 </section>
 <section id="input-constraints">
@@ -275,6 +275,69 @@ Parameters of the various heating technologies. Includes load shares, efficienci
 - integer
 - <strong>start_year</strong> ≤ value ≤ <strong>2070</strong>
 - default 2050</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">input/energy_need_improvements.csv</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>building_category</p></th>
+<th class="head"><p>building_code</p></th>
+<th class="head"><p>purpose</p></th>
+<th class="head"><p>function</p></th>
+<th class="head"><p>start_year</p></th>
+<th class="head"><p>value</p></th>
+<th class="head"><p>end_year</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>default</p></td>
+<td><p>default</p></td>
+<td><p>cooling</p></td>
+<td><p>yearly_reduction</p></td>
+<td><p>2020</p></td>
+<td><p>0.0</p></td>
+<td><p>2050</p></td>
+</tr>
+<tr class="row-odd"><td><p>default</p></td>
+<td><p>default</p></td>
+<td><p>electrical_equipment</p></td>
+<td><p>yearly_reduction</p></td>
+<td><p>2021</p></td>
+<td><p>0.01</p></td>
+<td><p>2050</p></td>
+</tr>
+<tr class="row-even"><td><p>default</p></td>
+<td><p>default</p></td>
+<td><p>fans_and_pumps</p></td>
+<td><p>yearly_reduction</p></td>
+<td><p>2020</p></td>
+<td><p>0.0</p></td>
+<td><p>2050</p></td>
+</tr>
+<tr class="row-odd"><td><p>default</p></td>
+<td><p>default</p></td>
+<td><p>heating_dhw</p></td>
+<td><p>yearly_reduction</p></td>
+<td><p>2020</p></td>
+<td><p>0.0</p></td>
+<td><p>2050</p></td>
+</tr>
+<tr class="row-even"><td><p>default</p></td>
+<td><p>default</p></td>
+<td><p>lighting</p></td>
+<td><p>improvement_at_end_year</p></td>
+<td><p>2020</p></td>
+<td><p>0.5555555555555556</p></td>
+<td><p>2030</p></td>
+</tr>
+<tr class="row-odd"><td><p>default</p></td>
+<td><p>default</p></td>
+<td><p>lighting</p></td>
+<td><p>yearly_reduction</p></td>
+<td><p>2031</p></td>
+<td><p>0.005</p></td>
+<td><p>2050</p></td>
+</tr>
+</tbody>
+</table>
 </div></div>
 </div><div aria-labelledby="tab-0-0-2" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-2" name="0-2" role="tabpanel" tabindex="0"><div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-3-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-3-3-0" name="3-0" role="tab" tabindex="0">holiday_home_stock</button><button aria-controls="panel-3-3-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-3-3-1" name="3-1" role="tab" tabindex="-1">holiday_home_energy_consumption</button></div><div aria-labelledby="tab-3-3-0" class="sphinx-tabs-panel" id="panel-3-3-0" name="3-0" role="tabpanel" tabindex="0"><p><code class="docutils literal notranslate"><span class="pre">year</span></code>
@@ -297,7 +360,7 @@ Parameters of the various heating technologies. Includes load shares, efficienci
 - integer or empty</p>
 </div></div>
 </div><div aria-labelledby="tab-0-0-3" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-3" name="0-3" role="tabpanel" tabindex="0"><div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-4-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-4-4-0" name="4-0" role="tab" tabindex="0">heating_system_forecast</button><button aria-controls="panel-4-4-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-4-4-1" name="4-1" role="tab" tabindex="-1">heating_system_initial_shares</button><button aria-controls="panel-4-4-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-4-4-2" name="4-2" role="tab" tabindex="-1">heating_system_efficiencies</button></div><div aria-labelledby="tab-4-4-0" class="sphinx-tabs-panel" id="panel-4-4-0" name="4-0" role="tabpanel" tabindex="0"><p><code class="docutils literal notranslate"><span class="pre">building_category</span></code>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-4-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-4-4-0" name="4-0" role="tab" tabindex="0">heating_system_forecast</button><button aria-controls="panel-4-4-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-4-4-1" name="4-1" role="tab" tabindex="-1">heating_system_initial_shares</button><button aria-controls="panel-4-4-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-4-4-2" name="4-2" role="tab" tabindex="-1">heating_systems_efficiencies</button></div><div aria-labelledby="tab-4-4-0" class="sphinx-tabs-panel" id="panel-4-4-0" name="4-0" role="tabpanel" tabindex="0"><p><code class="docutils literal notranslate"><span class="pre">building_category</span></code>
 - required
 - values: house, apartment_block, kindergarten, school, university, office, retail, hotel, hospital, nursing_home, culture, sports, storage_repairs, default, residential, non_residential</p>
 <p><code class="docutils literal notranslate"><span class="pre">building_code</span></code>
@@ -336,48 +399,63 @@ Parameters of the various heating technologies. Includes load shares, efficienci
 </div><div aria-labelledby="tab-4-4-2" class="sphinx-tabs-panel" hidden="true" id="panel-4-4-2" name="4-2" role="tabpanel" tabindex="0"><p><code class="docutils literal notranslate"><span class="pre">heating_systems</span></code>
 - required
 - string</p>
-<p><code class="docutils literal notranslate"><span class="pre">base_load_energy_product</span></code>
+<p><code class="docutils literal notranslate"><span class="pre">Grunnlast</span></code>
 - required
 - string</p>
-<p><code class="docutils literal notranslate"><span class="pre">peak_load_energy_product</span></code>
+<p><code class="docutils literal notranslate"><span class="pre">Spisslast</span></code>
 - required
 - string</p>
-<p><code class="docutils literal notranslate"><span class="pre">tertiary_load_energy_product</span></code>
+<p><code class="docutils literal notranslate"><span class="pre">Ekstralast</span></code>
 - required
 - string</p>
-<p><code class="docutils literal notranslate"><span class="pre">tertiary_load_coverage</span></code>
+<p><code class="docutils literal notranslate"><span class="pre">Grunnlast</span> <span class="pre">energivare</span></code>
+- required
+- string</p>
+<p><code class="docutils literal notranslate"><span class="pre">Spisslast</span> <span class="pre">energivare</span></code>
+- required
+- string</p>
+<p><code class="docutils literal notranslate"><span class="pre">Ekstralast</span> <span class="pre">energivare</span></code>
+- required
+- string</p>
+<p><code class="docutils literal notranslate"><span class="pre">Ekstralast</span> <span class="pre">andel</span></code>
 - required
 - float
 - float using a decimal point (‘.’) as the separator
 - <strong>0.0</strong> ≤ value ≤ <strong>1.0</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">&quot;base_load_coverage</span></code>
+<p><code class="docutils literal notranslate"><span class="pre">Grunnlast</span> <span class="pre">andel</span></code>
 - required
 - float
 - <strong>0.0</strong> ≤ value ≤ <strong>1.0</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">peak_load_coverage</span></code>
+<p><code class="docutils literal notranslate"><span class="pre">Spisslast</span> <span class="pre">andel</span></code>
 - required
 - float
 - <strong>0.0</strong> ≤ value ≤ <strong>1.0</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">base_load_efficiency</span></code>
+<p><code class="docutils literal notranslate"><span class="pre">Grunnlast</span> <span class="pre">virkningsgrad</span></code>
 - required
 - float
 - value &gt; <strong>0.0</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">peak_load_efficiency</span></code>
+<p><code class="docutils literal notranslate"><span class="pre">Spisslast</span> <span class="pre">virkningsgrad</span></code>
 - required
 - float
 - value &gt; <strong>0.0</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">tertiary_load_efficiency</span></code>
+<p><code class="docutils literal notranslate"><span class="pre">Ekstralast</span> <span class="pre">virkningsgrad</span></code>
 - required
 - float
 - value &gt; <strong>0.0</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">domestic_hot_water_energy_product</span></code>
+<p><code class="docutils literal notranslate"><span class="pre">Tappevann</span></code>
 - required
 - string</p>
-<p><code class="docutils literal notranslate"><span class="pre">domestic_hot_water_efficiency</span></code>
+<p><code class="docutils literal notranslate"><span class="pre">Tappevann</span> <span class="pre">energivare</span></code>
+- required
+- string</p>
+<p><code class="docutils literal notranslate"><span class="pre">Tappevann</span> <span class="pre">virkningsgrad</span></code>
 - required
 - float
 - value &gt; <strong>0.0</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">cooling_efficiency</span></code>
+<p><code class="docutils literal notranslate"><span class="pre">Spesifikt</span> <span class="pre">elforbruk</span></code>
+- required
+- float</p>
+<p><code class="docutils literal notranslate"><span class="pre">Kjoling</span> <span class="pre">virkningsgrad</span></code>
 - required
 - float
 - value &gt; <strong>0.0</strong></p>
@@ -458,9 +536,9 @@ building code means all building codes.</p>
 <p><em>Building category</em> has two additional categories: <strong>residential</strong> and
 <strong>non-residental</strong>. <strong>residential</strong> consists of houses and apartment blocks and <strong>non-residential</strong> are the other
 building categories. In the input constraint overview these aggregated categories are specified when available.</p>
-<p>Last Updated on 2025-09-30.</p>
+<p>Last Updated on 2025-10-01.</p>
 <blockquote>
-<div><p>Version: .</p>
+<div><p>Version: 1.2.9.</p>
 </div></blockquote>
 </section>
 </section>

@@ -99,8 +99,65 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ebm-cmd-helpers-module">
-<h1>ebm.cmd.helpers module<a class="headerlink" href="#ebm-cmd-helpers-module" title="Link to this heading"></a></h1>
+  <section id="module-ebm.cmd.helpers">
+<span id="ebm-cmd-helpers-module"></span><h1>ebm.cmd.helpers module<a class="headerlink" href="#module-ebm.cmd.helpers" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.cmd.helpers.load_environment_from_dotenv">
+<span class="sig-name descname"><span class="pre">load_environment_from_dotenv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/cmd/helpers.html#load_environment_from_dotenv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.cmd.helpers.load_environment_from_dotenv" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.cmd.helpers.configure_json_log">
+<span class="sig-name descname"><span class="pre">configure_json_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_directory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/cmd/helpers.html#configure_json_log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.cmd.helpers.configure_json_log" title="Link to this definition"></a></dt>
+<dd><p>Configures JSON logging using the <cite>loguru</cite> logger.</p>
+<p>This function sets up structured JSON logging to a file, with the log file path
+determined by the <cite>LOG_DIRECTORY</cite> environment variable or the provided <cite>log_directory</cite> argument.
+If <cite>LOG_DIRECTORY</cite> is set to ‘TRUE’, the default directory ‘log’ is used.
+If it is set to ‘FALSE’, logging is skipped.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>log_directory<span class="classifier">str or bool, optional</span></dt><dd><p>The directory where the log file should be saved. If set to <cite>False</cite>, logging is disabled
+unless overridden by the <cite>LOG_DIRECTORY</cite> environment variable.</p>
+</dd>
+</dl>
+</section>
+<section id="environment-variables">
+<h2>Environment Variables<a class="headerlink" href="#environment-variables" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>LOG_DIRECTORY<span class="classifier">str</span></dt><dd><p>Overrides the <cite>log_directory</cite> argument when set. Special values:
+- ‘TRUE’: uses default directory ‘log’
+- ‘FALSE’: disables logging</p>
+</dd>
+</dl>
+</section>
+<section id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The log file is named using the current timestamp in ISO format (without colons).</p></li>
+<li><p>The log file is serialized in JSON format.</p></li>
+<li><p>The directory is created if it does not exist.</p></li>
+</ul>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">configure_json_log</span><span class="p">(</span><span class="s2">&quot;logs&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;LOG_DIRECTORY&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;TRUE&quot;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">configure_json_log</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.cmd.helpers.configure_loglevel">
+<span class="sig-name descname"><span class="pre">configure_loglevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'INFO'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/cmd/helpers.html#configure_loglevel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.cmd.helpers.configure_loglevel" title="Link to this definition"></a></dt>
+<dd><p>Sets loguru loglevel to INFO unless ebm is called with parameter –debug and the environment variable DEBUG is not
+equal to True</p>
+</dd></dl>
+
 </section>
 
 

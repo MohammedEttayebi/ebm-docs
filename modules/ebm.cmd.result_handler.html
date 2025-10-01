@@ -99,8 +99,95 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ebm-cmd-result-handler-module">
-<h1>ebm.cmd.result_handler module<a class="headerlink" href="#ebm-cmd-result-handler-module" title="Link to this heading"></a></h1>
+  <section id="module-ebm.cmd.result_handler">
+<span id="ebm-cmd-result-handler-module"></span><h1>ebm.cmd.result_handler module<a class="headerlink" href="#module-ebm.cmd.result_handler" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.cmd.result_handler.transform_model_to_horizontal">
+<span class="sig-name descname"><span class="pre">transform_model_to_horizontal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'m2'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/cmd/result_handler.html#transform_model_to_horizontal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.cmd.result_handler.transform_model_to_horizontal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.cmd.result_handler.transform_to_sorted_heating_systems">
+<span class="sig-name descname"><span class="pre">transform_to_sorted_heating_systems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">holiday_homes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">building_column</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'building_category'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/cmd/result_handler.html#transform_to_sorted_heating_systems"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.cmd.result_handler.transform_to_sorted_heating_systems" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.cmd.result_handler.transform_heating_systems_to_horizontal">
+<span class="sig-name descname"><span class="pre">transform_heating_systems_to_horizontal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/cmd/result_handler.html#transform_heating_systems_to_horizontal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.cmd.result_handler.transform_heating_systems_to_horizontal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.cmd.result_handler.write_result">
+<span class="sig-name descname"><span class="pre">write_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csv_delimiter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheet_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'area</span> <span class="pre">forecast'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/cmd/result_handler.html#write_result"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.cmd.result_handler.write_result" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.cmd.result_handler.append_result">
+<span class="sig-name descname"><span class="pre">append_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheet_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Sheet</span> <span class="pre">1'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/cmd/result_handler.html#append_result"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.cmd.result_handler.append_result" title="Link to this definition"></a></dt>
+<dd><p>Write df to output_file using sheet_name. If output_file already exists the sheet will be added tp ouput_file rather
+than replacing the entire content.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
+<p>output_file :
+df :
+sheet_name :</p>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h2>
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ebm.cmd.result_handler.EbmDefaultHandler">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EbmDefaultHandler</span></span><a class="reference internal" href="../_modules/ebm/cmd/result_handler.html#EbmDefaultHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.cmd.result_handler.EbmDefaultHandler" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.cmd.result_handler.EbmDefaultHandler.extract_model">
+<span class="sig-name descname"><span class="pre">extract_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ebm.model.data_classes.html#ebm.model.data_classes.YearRange" title="ebm.model.data_classes.YearRange"><span class="pre">YearRange</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">building_categories</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ebm.model.building_category.html#ebm.model.building_category.BuildingCategory" title="ebm.model.building_category.BuildingCategory"><span class="pre">BuildingCategory</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ebm.model.database_manager.html#ebm.model.database_manager.DatabaseManager" title="ebm.model.database_manager.DatabaseManager"><span class="pre">DatabaseManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_choice</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'energy-use'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/cmd/result_handler.html#EbmDefaultHandler.extract_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.cmd.result_handler.EbmDefaultHandler.extract_model" title="Link to this definition"></a></dt>
+<dd><p>Extract dataframe for a certain step in the ebm model.</p>
+<p>Possible steps are energy_use (default), heating-systems, energy-use, area-forecast</p>
+<section id="id1">
+<h2>Parameters<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>year_range : ebm.model.dataclasses.YearRange
+building_categories : list[BuildingCategory]
+database_manager : ebm.model.database_manager.DatabaseManager
+step_choice : str, optional</p>
+</section>
+<section id="id2">
+<h2>Returns<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>pd.DataFrame</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.cmd.result_handler.EbmDefaultHandler.extract_energy_requirements">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extract_energy_requirements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">building_categories</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ebm.model.database_manager.html#ebm.model.database_manager.DatabaseManager" title="ebm.model.database_manager.DatabaseManager"><span class="pre">DatabaseManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">area_forecast</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ebm.model.data_classes.html#ebm.model.data_classes.YearRange" title="ebm.model.data_classes.YearRange"><span class="pre">YearRange</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/cmd/result_handler.html#EbmDefaultHandler.extract_energy_requirements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.cmd.result_handler.EbmDefaultHandler.extract_energy_requirements" title="Link to this definition"></a></dt>
+<dd><p>Extracts energy needs for building_categories and period</p>
+<section id="id3">
+<h2>Parameters<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>building_categories : list[BuildingCategory]
+database_manager : ebm.model.database_manager.DatabaseManager
+area_forecast : pd.DataFrame
+period :ebm.model.dataclasses.YearRange</p>
+</section>
+<section id="id4">
+<h2>Returns<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>pd.DataFrame</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.cmd.result_handler.EbmDefaultHandler.extract_area_forecast">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extract_area_forecast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">building_categories</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ebm.model.database_manager.html#ebm.model.database_manager.DatabaseManager" title="ebm.model.database_manager.DatabaseManager"><span class="pre">DatabaseManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ebm.model.data_classes.html#ebm.model.data_classes.YearRange" title="ebm.model.data_classes.YearRange"><span class="pre">YearRange</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/cmd/result_handler.html#EbmDefaultHandler.extract_area_forecast"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.cmd.result_handler.EbmDefaultHandler.extract_area_forecast" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.cmd.result_handler.EbmDefaultHandler.write_tqdm_result">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_tqdm_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csv_delimiter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">','</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reset_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/cmd/result_handler.html#EbmDefaultHandler.write_tqdm_result"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.cmd.result_handler.EbmDefaultHandler.write_tqdm_result" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 
 

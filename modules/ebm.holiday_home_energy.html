@@ -98,8 +98,223 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ebm-holiday-home-energy-module">
-<h1>ebm.holiday_home_energy module<a class="headerlink" href="#ebm-holiday-home-energy-module" title="Link to this heading"></a></h1>
+  <section id="module-ebm.holiday_home_energy">
+<span id="ebm-holiday-home-energy-module"></span><h1>ebm.holiday_home_energy module<a class="headerlink" href="#module-ebm.holiday_home_energy" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ebm.holiday_home_energy.HolidayHomeEnergy">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HolidayHomeEnergy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">population</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">holiday_homes_by_category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">electricity_usage_stats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fuelwood_usage_stats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fossil_fuel_usage_stats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/holiday_home_energy.html#HolidayHomeEnergy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.holiday_home_energy.HolidayHomeEnergy" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.holiday_home_energy.HolidayHomeEnergy.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">population</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">holiday_homes_by_category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">electricity_usage_stats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fuelwood_usage_stats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fossil_fuel_usage_stats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/holiday_home_energy.html#HolidayHomeEnergy.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.holiday_home_energy.HolidayHomeEnergy.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.holiday_home_energy.HolidayHomeEnergy.calculate_energy_usage">
+<span class="sig-name descname"><span class="pre">calculate_energy_usage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Series</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/ebm/holiday_home_energy.html#HolidayHomeEnergy.calculate_energy_usage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.holiday_home_energy.HolidayHomeEnergy.calculate_energy_usage" title="Link to this definition"></a></dt>
+<dd><p>Calculate projected energy usage for holiday homes.</p>
+<p>This method projects future energy usage for electricity, fuelwood, and fossil fuels
+based on historical data and combines these projections with existing statistics.</p>
+<section id="yields">
+<h2>Yields<a class="headerlink" href="#yields" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>Iterable[pd.Series]</dt><dd><p>A series of projected energy usage values for electricity, fuelwood, and fossil fuels,
+with NaN values filled from the existing statistics.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ebm.holiday_home_energy.HolidayHomeEnergy.new_instance">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ebm.model.database_manager.html#ebm.model.database_manager.DatabaseManager" title="ebm.model.database_manager.DatabaseManager"><span class="pre">DatabaseManager</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ebm.holiday_home_energy.HolidayHomeEnergy" title="ebm.holiday_home_energy.HolidayHomeEnergy"><span class="pre">HolidayHomeEnergy</span></a></span></span><a class="reference internal" href="../_modules/ebm/holiday_home_energy.html#HolidayHomeEnergy.new_instance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.holiday_home_energy.HolidayHomeEnergy.new_instance" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.holiday_home_energy.project_electricity_usage">
+<span class="sig-name descname"><span class="pre">project_electricity_usage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">electricity_usage_stats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">holiday_homes_by_category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">population</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="reference internal" href="../_modules/ebm/holiday_home_energy.html#project_electricity_usage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.holiday_home_energy.project_electricity_usage" title="Link to this definition"></a></dt>
+<dd><p>Calculate the projected electricity usage for holiday homes.</p>
+<p>This function projects the future electricity usage for holiday homes based on historical
+electricity usage statistics, the number of holiday homes by category, and population data.</p>
+<p>Population is used to work out what years are needed in the projection.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>electricity_usage_stats<span class="classifier">pd.Series</span></dt><dd><p>A pandas Series containing historical electricity usage statistics.</p>
+</dd>
+<dt>holiday_homes_by_category<span class="classifier">pd.DataFrame</span></dt><dd><p>A pandas DataFrame containing the number of holiday homes by year. Each column is considered as a category.</p>
+</dd>
+<dt>population<span class="classifier">pd.Series</span></dt><dd><p>A pandas Series containing population data.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>pd.Series</dt><dd><p>A pandas Series with the projected electricity usage in gigawatt-hours (GWh) for future years.</p>
+</dd>
+</dl>
+</section>
+<section id="raises">
+<h2>Raises<a class="headerlink" href="#raises" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>ValueError</dt><dd><p>If the input Series do not meet the expected criteria.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.holiday_home_energy.project_fuelwood_usage">
+<span class="sig-name descname"><span class="pre">project_fuelwood_usage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fuelwood_usage_stats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">holiday_homes_by_category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">population</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="reference internal" href="../_modules/ebm/holiday_home_energy.html#project_fuelwood_usage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.holiday_home_energy.project_fuelwood_usage" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.holiday_home_energy.project_fossil_fuel_usage">
+<span class="sig-name descname"><span class="pre">project_fossil_fuel_usage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fossil_fuel_usage_stats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">holiday_homes_by_category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">population</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="reference internal" href="../_modules/ebm/holiday_home_energy.html#project_fossil_fuel_usage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.holiday_home_energy.project_fossil_fuel_usage" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.holiday_home_energy.sum_holiday_homes">
+<span class="sig-name descname"><span class="pre">sum_holiday_homes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">holiday_homes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="reference internal" href="../_modules/ebm/holiday_home_energy.html#sum_holiday_homes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.holiday_home_energy.sum_holiday_homes" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.holiday_home_energy.population_over_holiday_homes">
+<span class="sig-name descname"><span class="pre">population_over_holiday_homes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">population</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">holiday_homes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="reference internal" href="../_modules/ebm/holiday_home_energy.html#population_over_holiday_homes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.holiday_home_energy.population_over_holiday_homes" title="Link to this definition"></a></dt>
+<dd><p>Average number of holiday homes by population.</p>
+<section id="id1">
+<h2>Parameters<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>population : pd.Series
+holiday_homes : pd.Series</p>
+</section>
+<section id="id2">
+<h2>Returns<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>pd.Series</p>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.holiday_home_energy.projected_holiday_homes">
+<span class="sig-name descname"><span class="pre">projected_holiday_homes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">population</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">holiday_homes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="reference internal" href="../_modules/ebm/holiday_home_energy.html#projected_holiday_homes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.holiday_home_energy.projected_holiday_homes" title="Link to this definition"></a></dt>
+<dd><p>Projects future number of holiday homes based on the population and historical average number of holiday homes</p>
+<section id="id3">
+<h2>Parameters<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>population<span class="classifier">pd.Series</span></dt><dd><p>population in every year of the projection</p>
+</dd>
+<dt>holiday_homes<span class="classifier">pd.Series</span></dt><dd><p>historical number of holiday homes</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h2>Returns<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>pd.Series</dt><dd><p>population over average number of holiday homes</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.holiday_home_energy.energy_usage_by_holiday_homes">
+<span class="sig-name descname"><span class="pre">energy_usage_by_holiday_homes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">energy_usage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">holiday_homes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="reference internal" href="../_modules/ebm/holiday_home_energy.html#energy_usage_by_holiday_homes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.holiday_home_energy.energy_usage_by_holiday_homes" title="Link to this definition"></a></dt>
+<dd><p>(08) 14 Elektrisitet pr fritidsbolig staitsikk (kWh) in Energibruk fritidsboliger.xlsx
+(10) 16 Ved pr fritidsbolig statistikk (kWh) 2019 - 2023</p>
+<section id="id5">
+<h2>Parameters<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>energy_usage<span class="classifier">pd.Series</span></dt><dd><p>Electricity usage by year from SSB <a class="reference external" href="https://www.ssb.no/statbank/sq/10103348">https://www.ssb.no/statbank/sq/10103348</a> 2001 - 2023</p>
+</dd>
+<dt>holiday_homes<span class="classifier">pd.Series</span></dt><dd><p>Total number of holiday homes of any category from SSB <a class="reference external" href="https://www.ssb.no/statbank/sq/10103336">https://www.ssb.no/statbank/sq/10103336</a></p>
+</dd>
+</dl>
+</section>
+<section id="id6">
+<h2>Returns<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.holiday_home_energy.projected_fuelwood_usage_holiday_homes">
+<span class="sig-name descname"><span class="pre">projected_fuelwood_usage_holiday_homes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">historical_fuelwood_usage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="reference internal" href="../_modules/ebm/holiday_home_energy.html#projected_fuelwood_usage_holiday_homes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.holiday_home_energy.projected_fuelwood_usage_holiday_homes" title="Link to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Projects future fuelwood usage for holiday homes based on historical data. The projection</dt><dd><p>is calculated as the mean of the last 5 years of historical_fuelwood_usage.</p>
+</dd>
+</dl>
+<section id="id7">
+<h2>Parameters<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<p>historical_fuelwood_usage : pd.Series</p>
+</section>
+<section id="id8">
+<h2>Returns<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>pd.Series</dt><dd><dl class="simple">
+<dt>A pandas Series with with NaN values in fuelwood usage replaced by projected use. Years present</dt><dd><p>in historical_fuelwood_usage is returned as NaN</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.holiday_home_energy.projected_electricity_usage_holiday_homes">
+<span class="sig-name descname"><span class="pre">projected_electricity_usage_holiday_homes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">electricity_usage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/holiday_home_energy.html#projected_electricity_usage_holiday_homes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.holiday_home_energy.projected_electricity_usage_holiday_homes" title="Link to this definition"></a></dt>
+<dd><p>Project future electricity usage for holiday homes based on historical data.</p>
+<p>This function projects future electricity usage by creating three ranges of projections
+and padding the series with NaN values and the last projection value as needed.</p>
+<p>15 (09) Elektrisitet pr fritidsbolig framskrevet (kWh) in Energibruk fritidsboliger.xlsx</p>
+<section id="id9">
+<h2>Parameters<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>electricity_usage<span class="classifier">pd.Series</span></dt><dd><p>A pandas Series containing historical electricity usage data. The index should include the year 2019,
+and the Series should contain at least 40 years of data with some NaN values for projection.</p>
+</dd>
+</dl>
+</section>
+<section id="id10">
+<h2>Returns<a class="headerlink" href="#id10" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>pd.Series</dt><dd><dl class="simple">
+<dt>A pandas Series with with NaN values in electricity usage replaced by projected energy use. Years with</dt><dd><p>values in energy_usage has a projected usage of NaN</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="id11">
+<h2>Raises<a class="headerlink" href="#id11" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>ValueError</dt><dd><p>If the year 2019 is not in the index of the provided Series.
+If there are no NaN values in the provided Series.
+If the length of the Series is less than or equal to 40.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.holiday_home_energy.calculate_energy_use">
+<span class="sig-name descname"><span class="pre">calculate_energy_use</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ebm.model.database_manager.html#ebm.model.database_manager.DatabaseManager" title="ebm.model.database_manager.DatabaseManager"><span class="pre">DatabaseManager</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/holiday_home_energy.html#calculate_energy_use"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.holiday_home_energy.calculate_energy_use" title="Link to this definition"></a></dt>
+<dd><p>Calculates holiday home energy use by from HolidayHomeEnergy.calculate_energy_usage()</p>
+<section id="id12">
+<h2>Parameters<a class="headerlink" href="#id12" title="Link to this heading"></a></h2>
+<p>database_manager : DatabaseManager</p>
+</section>
+<section id="id13">
+<h2>Returns<a class="headerlink" href="#id13" title="Link to this heading"></a></h2>
+<p>pd.DataFrame</p>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ebm.holiday_home_energy.transform_holiday_homes_to_horizontal">
+<span class="sig-name descname"><span class="pre">transform_holiday_homes_to_horizontal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/holiday_home_energy.html#transform_holiday_homes_to_horizontal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.holiday_home_energy.transform_holiday_homes_to_horizontal" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
 
 
