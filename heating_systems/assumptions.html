@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Heating systems &mdash; EBM - Energibruksmodell  documentation</title>
+  <title>Assumptions &mdash; EBM - Energibruksmodell  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=9ed7352e" />
@@ -20,8 +20,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Methods" href="methods.html" />
-    <link rel="prev" title="Assumptions" href="../energy_need/assumptions.html" /> 
+    <link rel="next" title="Tables and glossary" href="tables_glossary.html" />
+    <link rel="prev" title="Methods" href="methods.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -60,9 +60,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../building_parameters/index.html">Building category and building code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../area/index.html">Area</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../energy_need/index.html">Energy need</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Heating systems</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Heating systems</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="methods.html">Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assumptions.html">Assumptions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Assumptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#initial-shares">Initial shares</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heating-systems-efficiencies">Heating systems efficiencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#forecasting">Forecasting</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="tables_glossary.html">Tables and glossary</a></li>
 </ul>
 </li>
@@ -91,9 +96,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Heating systems</li>
+          <li class="breadcrumb-item"><a href="index.html">Heating systems</a></li>
+      <li class="breadcrumb-item active">Assumptions</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/heating_systems/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/heating_systems/assumptions.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -101,33 +107,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="heating-systems">
-<span id="heating-systems-heating-systems"></span><h1>Heating systems<a class="headerlink" href="#heating-systems" title="Link to this heading"></a></h1>
-<p>Heating systems is the link from the computed <em>energy need</em> to <em>energy use</em>. <em>Energy need</em> states what the building requires in
-terms of space heating, non-substitutable electrical use and hot tap water. Heating systems assigns specific heating technologies to meet the energy
-demand of space heating and hot tap water. Various heating technologies have different efficiencies and energy carriers which then gives an <em>energy use</em>.</p>
-<p>A combination of different heating systems can be assigned to each building category and each age group. It is also possible to do it on
-an aggregated level, like treating all non-residental area the same way. For instance, X % of the house area use only direct resistance heating to heat the home, while Y % of the house area
-use both direct resistance heating, an air-to-air heat pump and a wood stove, and so on. The composition of heating solutions can be changed
-over time in the forecast period.</p>
-<p>The input to EBM is aggregated heating system shares for houses, apartment blocks and non-residental buildings. The source of the intial shares is the
-Norwegian energy performance building database which has been processed outside of EBM. As part of the processing the energy useage per product and building category is compared with the
-national energy balance to fine tune the distribution of the various heating technologies. The process is described under “methods” and “assumptions” and an overview
-is shown in the flowchart below.</p>
-<div class="toctree-wrapper compound">
-</div>
-<a class="reference internal image-reference" href="../_images/Heating_systems_flowchart.png"><img alt="Flowchart of heating systems" src="../_images/Heating_systems_flowchart.png" style="width: 600px;" />
-</a>
-<p>Last Updated on 2025-10-02.</p>
-<p>Version: 1.2.10.</p>
+  <section id="assumptions">
+<h1>Assumptions<a class="headerlink" href="#assumptions" title="Link to this heading"></a></h1>
+<section id="initial-shares">
+<h2>Initial shares<a class="headerlink" href="#initial-shares" title="Link to this heading"></a></h2>
+<p>During calculation of the intial shares about 130 000 certificates from the building energy performance database do not have information about the
+buildings heating system. The certificates have information on “delivered energy” for various energy products. All the delivered energy coulumns are
+put together and an aggregation is made to create the most common combinations. Oil based heating was banned in 2020, but the database contains a lot of
+certificates issued before this ban. For the intiial shares we assume that half of the buildings who used oil-based heating switch to electric boilers and
+the other half to a water-borne heatpump.</p>
+<p>The building energy performance database gives us information on heating systems across the various building codes. However for some building categories,
+especially for newer building codes, the amount of certificates are too few to give a good representation of that particular building code and category.
+We therefore assume that the distribution of heating systems are the same across all non-residential buildings and building codes. The same assumption
+is made for residential buildings, but are different for houses and for apartments.</p>
+</section>
+<section id="heating-systems-efficiencies">
+<h2>Heating systems efficiencies<a class="headerlink" href="#heating-systems-efficiencies" title="Link to this heading"></a></h2>
+<p>Each heating technology is either a base load, peak load, tertiary load or hot water, making up the combined heating system. The
+different heating technologies have an assosicated efficency factor, load share factor and energy product.
+The efficiency factor, together with the related energy product, is used to get <em>energy use</em> per energy product
+from <em>energy need</em>. For example, given that the energy need is only covered by the specific technology:</p>
+<ul class="simple">
+<li><p>Air-air heat pumps have an efficiency factor of 2,5 with electricity as an energy product.
+If the energy need for space heating is 1000 kWh, then the energy use is 400 kWh of electricity.</p></li>
+<li><p>Wood fired stoves have an efficency factor of 0,65 with bio as an energy product.
+If the energy need for space heating is 1000 kWh, then the energy use is 1538 kWh of bio.</p></li>
+</ul>
+<p>The load share factor decides how much of the heating need is covered by a specific technology. A single air-air heat
+pump can not provide heating to the whole building, and in addtion needs supplementation from another heating technology at
+extreme temperatures. The current efficiencies and coverage factors are assumptions made by NVE.</p>
+<p>All the combinations can be found in the <a class="reference internal" href="tables_glossary.html#tables-and-glossary"><span class="std std-ref">Tables and glossary</span></a> subchapter.</p>
+</section>
+<section id="forecasting">
+<h2>Forecasting<a class="headerlink" href="#forecasting" title="Link to this heading"></a></h2>
+<p>The current implementation and numbers of forecasting heating systems is based on various assumptions. The first assumption is that natural gas is phased out as a heating
+system for buildings by 2030. The second assumption is the continued growth of air-air heat pumps in houses. The final assumption is an increase in water-borne
+heating in new apartment blocks and non-residential buildings from building code requirements. The last assumption is causes an increase in electric boilers and
+central heating heat pumps. The final assumption is that the share of distrcit heating will increase in both non-residental buildings and in apartment blocks.</p>
+<p>The current implementation of forecasting for energy
+systems is simplified, meaning it is not based on an economic optimization model such as <a class="reference external" href="https://iea-etsap.org/index.php/etsap-tools/model-generators/times">TIMES</a>.</p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../energy_need/assumptions.html" class="btn btn-neutral float-left" title="Assumptions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="methods.html" class="btn btn-neutral float-right" title="Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="methods.html" class="btn btn-neutral float-left" title="Methods" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tables_glossary.html" class="btn btn-neutral float-right" title="Tables and glossary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

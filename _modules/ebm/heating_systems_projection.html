@@ -232,7 +232,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">dm</span> <span class="o">=</span> <span class="n">database_manager</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">database_manager</span><span class="p">,</span> <span class="n">DatabaseManager</span><span class="p">)</span> <span class="k">else</span> <span class="n">DatabaseManager</span><span class="p">()</span>
         <span class="n">shares_start_year</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">get_heating_systems_shares_start_year</span><span class="p">()</span>
-        <span class="n">efficiencies</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">get_heating_system_efficiencies</span><span class="p">()</span>
+        <span class="n">efficiencies</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">get_heating_systems_efficiencies</span><span class="p">()</span>
         <span class="n">projection</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">get_heating_systems_projection</span><span class="p">()</span>
         <span class="n">building_code_list</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">get_building_code_list</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">HeatingSystemsProjection</span><span class="p">(</span><span class="n">shares_start_year</span><span class="o">=</span><span class="n">shares_start_year</span><span class="p">,</span>

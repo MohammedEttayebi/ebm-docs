@@ -182,8 +182,8 @@
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="ebm.model.file_handler.FileHandler.HEATING_SYSTEM_EFFICIENCIES">
-<span class="sig-name descname"><span class="pre">HEATING_SYSTEM_EFFICIENCIES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'heating_system_efficiencies.csv'</span></em><a class="headerlink" href="#ebm.model.file_handler.FileHandler.HEATING_SYSTEM_EFFICIENCIES" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="ebm.model.file_handler.FileHandler.HEATING_SYSTEMS_EFFICIENCIES">
+<span class="sig-name descname"><span class="pre">HEATING_SYSTEMS_EFFICIENCIES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'heating_systems_efficiencies.csv'</span></em><a class="headerlink" href="#ebm.model.file_handler.FileHandler.HEATING_SYSTEMS_EFFICIENCIES" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -394,17 +394,9 @@ per building category, tek and purpose.</p>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ebm.model.file_handler.FileHandler.get_heating_system_efficiencies">
-<span class="sig-name descname"><span class="pre">get_heating_system_efficiencies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/model/file_handler.html#FileHandler.get_heating_system_efficiencies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.file_handler.FileHandler.get_heating_system_efficiencies" title="Link to this definition"></a></dt>
-<dd><p>Load heating_system_efficiencies.csv from file into a dataframe</p>
-<section id="id4">
-<h2>Returns<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
-<dl class="simple">
-<dt>heating_system_efficiencies<span class="classifier">pd.DataFrame</span></dt><dd><p>pandas DataFrame with heating system efficiencies</p>
-</dd>
-</dl>
-</section>
-</dd></dl>
+<dt class="sig sig-object py" id="ebm.model.file_handler.FileHandler.get_heating_systems_efficiencies">
+<span class="sig-name descname"><span class="pre">get_heating_systems_efficiencies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/ebm/model/file_handler.html#FileHandler.get_heating_systems_efficiencies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.file_handler.FileHandler.get_heating_systems_efficiencies" title="Link to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ebm.model.file_handler.FileHandler.get_heating_systems_projection">
@@ -415,8 +407,8 @@ per building category, tek and purpose.</p>
 <dt class="sig sig-object py" id="ebm.model.file_handler.FileHandler.check_for_missing_files">
 <span class="sig-name descname"><span class="pre">check_for_missing_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/ebm/model/file_handler.html#FileHandler.check_for_missing_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.file_handler.FileHandler.check_for_missing_files" title="Link to this definition"></a></dt>
 <dd><p>Returns a list of required files that are not present in self.input_folder</p>
-<section id="id5">
-<h2>Returns<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<section id="id4">
+<h2>Returns<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
 <p>missing_files : List[str]</p>
 </section>
 <section id="raises">
@@ -434,19 +426,19 @@ per building category, tek and purpose.</p>
 <dt class="sig sig-object py" id="ebm.model.file_handler.FileHandler.create_missing_input_files">
 <span class="sig-name descname"><span class="pre">create_missing_input_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_directory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/ebm/model/file_handler.html#FileHandler.create_missing_input_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.file_handler.FileHandler.create_missing_input_files" title="Link to this definition"></a></dt>
 <dd><p>Creates any input files missing in self.input_directory. When source is omitted FileHandler</p>
-<section id="id6">
-<h2>Parameters<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<section id="id5">
+<h2>Parameters<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
 <dl class="simple">
 <dt>source_directory<span class="classifier">pathlib.Path, optional</span></dt><dd><p>Optional directory for sourcing files to copy.</p>
 </dd>
 </dl>
 </section>
-<section id="id7">
-<h2>Returns<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<section id="id6">
+<h2>Returns<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
 <p>None</p>
 </section>
-<section id="id8">
-<h2>See Also<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<section id="id7">
+<h2>See Also<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
 <p>default_data_directory : default source for data files</p>
 </section>
 </dd></dl>
@@ -460,8 +452,8 @@ per building category, tek and purpose.</p>
 <dt class="sig sig-object py" id="ebm.model.file_handler.FileHandler.validate_input_files">
 <span class="sig-name descname"><span class="pre">validate_input_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ebm/model/file_handler.html#FileHandler.validate_input_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ebm.model.file_handler.FileHandler.validate_input_files" title="Link to this definition"></a></dt>
 <dd><p>Validates the input files for correct formatting and content using the validators module</p>
-<section id="id9">
-<h2>Raises<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
+<section id="id8">
+<h2>Raises<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
 <dl class="simple">
 <dt>pa.errors.SchemaErrors</dt><dd><p>If any invalid data for formatting is found when validating files. The validation is lazy, meaning
 multiple errors may be listed in the exception.</p>
